@@ -1,28 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push.c                                             :+:      :+:    :+:   */
+/*   ft_rotate.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nrenz <nrenz@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/25 16:03:02 by nrenz             #+#    #+#             */
-/*   Updated: 2022/05/25 16:27:17 by nrenz            ###   ########.fr       */
+/*   Created: 2022/05/31 10:37:16 by nrenz             #+#    #+#             */
+/*   Updated: 2022/05/31 14:08:57 by nrenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	ft_push(t_push_swap *box)
+t_list	ft_rotate(t_list *box)
 {
-	int	temp;
-	int	i;
+	t_list	*first;
+	t_list	*last;
+	t_list	*second_to_last;
+	t_list	*temp;
 
-	temp = box->stack_b[0];
-	box->stack_b[0] = box->stack_a[0];
-	i = 0;
-	while (box->stack_a[i])
-	{
-		box->stack_a[i] = box->stack_a[i + 1];
-		i++;
-	}
+	box = first;
+	last = box;
+	while (!last->next)
+		last = last->next;
+	second_to_last = box;
+	while (!second_to_last->next->next)
+		second_to_last = second_to_last->next;
+	temp = ;
+	first->next = NULL;
+	
 }

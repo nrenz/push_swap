@@ -1,22 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   swap.c                                             :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nrenz <nrenz@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/25 15:51:37 by nrenz             #+#    #+#             */
-/*   Updated: 2022/05/25 16:00:43 by nrenz            ###   ########.fr       */
+/*   Created: 2022/05/30 14:09:51 by nrenz             #+#    #+#             */
+/*   Updated: 2022/05/31 14:01:29 by nrenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	ft_swap(t_push_swap *box)
+t_list	*ft_swap(t_list *box)
 {
-	int	temp;
+	t_list	*temp_a;
 
-	temp = box->stack_a[0];
-	box->stack_a[0] = box->stack_a[1];
-	box->stack_a[1] = temp;
+	if (!box || !box->next)
+		return (NULL);
+	temp_a = box;
+	box = box->next;
+	temp_a->next = box->next;
+	box->next = temp_a;
+	return (box);
 }

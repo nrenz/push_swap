@@ -1,31 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   reverse_rotate.c                                   :+:      :+:    :+:   */
+/*   push_swap_3.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nrenz <nrenz@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/25 17:33:51 by nrenz             #+#    #+#             */
-/*   Updated: 2022/05/25 17:50:00 by nrenz            ###   ########.fr       */
+/*   Created: 2022/05/30 10:03:21 by nrenz             #+#    #+#             */
+/*   Updated: 2022/05/30 13:31:13 by nrenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#ifndef PUSH_SWAP_H
+#define PUSH_SWAP_H
 
-void	ft_reverse_rotate(t_push_swap *box)
-{
-	int	i;
-	int	temp;
+#define INT32_MAX 2147483647
+#define INT32_MIN (-INT32_MAX-1)
 
-	i = 0;
-	while (box->stack_a[i])
-		i--;
-	i++;
-	temp = box->stack_a[i];
-	box->stack_a[0] = box->stack_a[i];
-	while (box->stack_a[i])
-	{
-		box->stack_a[i] = box->stack_a[i + 1];
-		i++;
-	}
-}
+#include <stdio.h>
+#include <unistd.h>
+#include "libft.h"
+#include <stdbool.h>
+
+#endif

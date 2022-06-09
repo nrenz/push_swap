@@ -6,29 +6,32 @@
 #    By: nrenz <nrenz@student.42wolfsburg.de>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/25 11:43:35 by nrenz             #+#    #+#              #
-#    Updated: 2022/05/30 14:04:11 by nrenz            ###   ########.fr        #
+#    Updated: 2022/06/09 16:47:28 by nrenz            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS = push_swap.c\
+SRCS =	push_swap.c\
+		utils_push_swap.c\
+		utils_error_check.c\
+		utils_operations.c\
 
-OBJS = $(SRC:.c=.o)
+OBJS = $(SRCS:.c=.o)
 
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 
-NAME = libft.a
+NAME = push_swap 
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	ar rcs $(NAME) $(OBJS)
+	$(CC) $(CFLAGS) $(OBJS) -o $(NAME) 
 
 clean:
-rm -f $(OBJS)
+	rm -f $(OBJS)
 
 fclean: clean
-	rm -f $(NME)
+	rm -f $(NAME)
 
 re: fclean $(NAME)
 

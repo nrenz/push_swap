@@ -6,7 +6,7 @@
 /*   By: nrenz <nrenz@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 14:58:14 by nrenz             #+#    #+#             */
-/*   Updated: 2022/06/09 16:06:42 by nrenz            ###   ########.fr       */
+/*   Updated: 2022/06/09 17:49:38 by nrenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,17 +69,4 @@ void	ft_list_add_back(t_list **lst, t_list *new)
 		last = ft_last_list(*lst);
 		last->next = new;
 	}
-}
-
-int	ft_list_size(t_list *list)
-{
-	int	length;
-
-	length = 0;
-	while (list)
-	{
-		list = list->next;
-		length++;
-	}
-	return (length);
 }

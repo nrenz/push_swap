@@ -6,7 +6,7 @@
 /*   By: nrenz <nrenz@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 14:58:14 by nrenz             #+#    #+#             */
-/*   Updated: 2022/06/09 17:49:38 by nrenz            ###   ########.fr       */
+/*   Updated: 2022/06/17 13:56:52 by nrenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,15 +35,22 @@ int	ft_atoi(const char *str)
 	return ((int)sign * number);
 }
 
+// erstelle neue Liste, dafür gebe Speicherpltz frei und initialisziere alle Werte für die Listen-Score zu -1,
+// damit die Variablen vorgefüllt sind und kein Random-Wert automatisch den Variablen zugewiesen wird.
 t_list	*ft_create_new_list(int content)
 {
 	t_list	*newlist;
 
-	newlist = malloc(sizeof(t_list *));
+	newlist = malloc(sizeof(t_list));
 	if (!newlist)
 		return (NULL);
 	newlist->content = content;
 	newlist->next = NULL;
+	newlist->score_a_list = -1;
+	newlist->rscore_a_list = -1;
+	newlist->score_b_list = -1;
+	newlist->rscore_b_list = -1;
+	newlist->rank = -1;
 	return (newlist);
 }
 
@@ -69,4 +76,15 @@ void	ft_list_add_back(t_list **lst, t_list *new)
 		last = ft_last_list(*lst);
 		last->next = new;
 	}
+}
+
+void	ft_putendl_fd(char *s, int fd)
+{
+	int	len;
+
+	len = 0;
+	while (s[len])
+		len++;
+	write(fd, s, len);
+	write(fd, "\n", 1);
 }

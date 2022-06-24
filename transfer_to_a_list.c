@@ -6,7 +6,7 @@
 /*   By: nrenz <nrenz@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 15:54:51 by nrenz             #+#    #+#             */
-/*   Updated: 2022/06/22 16:47:01 by nrenz            ###   ########.fr       */
+/*   Updated: 2022/06/24 12:35:24 by nrenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -130,7 +130,7 @@ void	ft_process_decision2(t_push_swap *push_swap, t_list *elem, int *ttype)
 	if (*ttype == 6)
 	{
 		while (elem->rscore_b_list-- > 0)
-			ft_rb(push_swap);
+			ft_rrb(push_swap);
 		while (elem->score_a_list-- > 0)
 			ft_ra(push_swap);
 	}

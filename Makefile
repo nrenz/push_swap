@@ -6,22 +6,23 @@
 #    By: nrenz <nrenz@student.42wolfsburg.de>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/25 11:43:35 by nrenz             #+#    #+#              #
-#    Updated: 2022/06/22 11:57:15 by nrenz            ###   ########.fr        #
+#    Updated: 2022/06/24 11:07:05 by nrenz            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS =	push_swap.c\
-		utils_push_swap.c\
-		utils_error_check.c\
-		operations.c\
-		sort.c\
-		utils_sort.c\
-		utils_operations_output_1.c\
-		utils_operations_output_2.c\
-		utils_operations_output_3.c\
-		prepare_transfer_to_a_list.c\
+SRCS =	create_lists.c \
+		push_swap_main.c \
+		utils_create_lists.c \
+		utils_error_check.c \
+		operations.c \
+		sort.c \
+		sort2.c \
+		utils_operations_output_1.c \
+		utils_operations_output_2.c \
+		utils_operations_output_3.c \
+		prepare_transfer_to_a_list.c \
 		transfer_to_a_list.c \
-		utils_transfer.c \
+		transfer_to_a_list2.c \
 
 OBJS = $(SRCS:.c=.o)
 

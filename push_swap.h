@@ -6,7 +6,7 @@
 /*   By: nrenz <nrenz@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 10:03:21 by nrenz             #+#    #+#             */
-/*   Updated: 2022/06/22 12:37:30 by nrenz            ###   ########.fr       */
+/*   Updated: 2022/06/24 17:00:07 by nrenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ typedef struct s_push_swap
 	int		max;
 }			t_push_swap;
 
+//create lists, fill, presort, sort
 t_list	*create_a_list(size_t list_size, char **argv);
 t_list	*create_b_list(void);
 void	ft_fill_b_list(t_push_swap *push_swap);
@@ -87,10 +88,7 @@ int		ft_total_score(t_list *list, int *transfer_type);
 int		ft_total_score2(int result, t_list *list, int *transfer_type);
 void	ft_process_decision(t_push_swap *push_swap, t_list *elem, int *ttype);
 void	ft_process_decision2(t_push_swap *push_swap, t_list *elem, int *ttype);
-
 void	ft_sort_list(t_push_swap *push_swap);
 void	ft_final_sort(t_push_swap *push_swap);
 
-void	ft_print_list(t_list *list);
-void	ft_print_list_score(t_list *list);
 #endif

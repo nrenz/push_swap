@@ -6,11 +6,23 @@
 /*   By: nrenz <nrenz@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 10:02:48 by nrenz             #+#    #+#             */
-/*   Updated: 2022/06/24 16:59:53 by nrenz            ###   ########.fr       */
+/*   Updated: 2022/06/27 17:31:38 by nrenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+void	ft_free_lists(t_list *list)
+{
+	t_list	*tmp;
+
+	while (list)
+	{
+		tmp = list->next;
+		free(list);
+		list = tmp;
+	}
+}
 
 int	main(int argc, char **argv)
 {
@@ -32,6 +44,8 @@ int	main(int argc, char **argv)
 	if (!push_swap->a_list)
 		return (1);
 	ft_sort_list(push_swap);
-	return (0);
 	free(push_swap);
+	ft_free_lists(push_swap->a_list);
+	ft_free_lists(push_swap->b_list);
+	return (0);
 }

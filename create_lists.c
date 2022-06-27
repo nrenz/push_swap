@@ -6,13 +6,11 @@
 /*   By: nrenz <nrenz@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/24 10:52:37 by nrenz             #+#    #+#             */
-/*   Updated: 2022/06/24 10:52:45 by nrenz            ###   ########.fr       */
+/*   Updated: 2022/06/27 17:03:32 by nrenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-// static void	ft_print_list_score(t_list *list);
 
 t_list	*create_a_list(size_t list_size, char **argv)
 {

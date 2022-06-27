@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils_push_swap.c                                  :+:      :+:    :+:   */
+/*   utils_create_lists.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nrenz <nrenz@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 14:58:14 by nrenz             #+#    #+#             */
-/*   Updated: 2022/06/17 13:56:52 by nrenz            ###   ########.fr       */
+/*   Updated: 2022/06/27 16:55:22 by nrenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ t_list	*ft_create_new_list(int content)
 	newlist->rscore_a_list = -1;
 	newlist->score_b_list = -1;
 	newlist->rscore_b_list = -1;
-	newlist->rank = -1;
+	newlist->index = -1;
 	return (newlist);
 }
 

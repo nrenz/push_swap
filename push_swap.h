@@ -6,7 +6,7 @@
 /*   By: nrenz <nrenz@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 10:03:21 by nrenz             #+#    #+#             */
-/*   Updated: 2022/06/24 17:00:07 by nrenz            ###   ########.fr       */
+/*   Updated: 2022/06/27 10:31:30 by nrenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ typedef struct s_list
 	int				rscore_a_list;
 	int				score_b_list;
 	int				rscore_b_list;
-	int				rank;
+	int				index;
 }					t_list;
 
 typedef struct s_push_swap
@@ -58,7 +58,7 @@ void	ft_swap(t_list **list);
 void	ft_rotate(t_list **list);
 void	ft_reverse_rotate(t_list **list);
 void	ft_push(t_list **src_list, t_list **dst_list);
-void	ft_set_ranks(t_list *list, int *array);
+void	ft_set_index(t_list *list, int *array);
 void	ft_find_minmedmax(t_list *list, t_push_swap *push_swap);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_triple_sort(t_push_swap *push_swap);

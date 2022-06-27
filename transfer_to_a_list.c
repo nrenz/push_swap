@@ -6,41 +6,47 @@
 /*   By: nrenz <nrenz@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 15:54:51 by nrenz             #+#    #+#             */
-/*   Updated: 2022/06/24 12:35:24 by nrenz            ###   ########.fr       */
+/*   Updated: 2022/06/27 12:29:10 by nrenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+/*
+
+*/
 t_list	*ft_find_best_elem(t_list *list, int *transfer_type)
 {
 	t_list	*temp_elem;
 	int		best_total_score;
-	int		best_rank;
+	int		best_index;
 	int		best_ttype;
 
 	best_total_score = ft_total_score(list, transfer_type);
-	best_rank = list->rank;
+	best_index = list->index;
 	best_ttype = *transfer_type;
 	temp_elem = list;
 	while (list)
 	{
 		if (ft_total_score(list, transfer_type) < best_total_score
 			|| (ft_total_score(list, transfer_type) == best_total_score
-				&& list->rank >= best_rank))
+				&& list->index >= best_index))
 		{
 			best_total_score = ft_total_score(list, transfer_type);
-			best_rank = list->rank;
+			best_index = list->index;
 			best_ttype = *transfer_type;
 		}
 		list = list->next;
 	}
 	*transfer_type = best_ttype;
-	while (temp_elem->rank != best_rank)
+	while (temp_elem->index != best_index)
 		temp_elem = temp_elem->next;
 	return (temp_elem);
 }
 
+/* 
+
+ */
 int	ft_total_score(t_list *list, int *transfer_type)
 {
 	int	result;
@@ -83,6 +89,9 @@ int	ft_total_score2(int result, t_list *list, int *transfer_type)
 	return (result);
 }
 
+/*
+6 optionen, in denen die listen vorbereitet werden, damit 
+*/
 void	ft_process_decision(t_push_swap *push_swap, t_list *elem, int *ttype)
 {
 	if (*ttype == 1)

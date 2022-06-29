@@ -6,7 +6,7 @@
 /*   By: nrenz <nrenz@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 10:02:48 by nrenz             #+#    #+#             */
-/*   Updated: 2022/06/29 12:35:58 by nrenz            ###   ########.fr       */
+/*   Updated: 2022/06/29 13:45:12 by nrenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,8 @@ int	main(int argc, char **argv)
 {
 	t_push_swap	*push_swap;
 
-	if (ft_check_error(argv) || ft_check_duplicates(argv) || ft_check_args(argc))
+	if (ft_check_args(argc) || ft_check_error(argv)
+		|| ft_check_duplicates(argv))
 	{
 		write(2, "Error", 6);
 		return (1);

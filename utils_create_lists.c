@@ -6,7 +6,7 @@
 /*   By: nrenz <nrenz@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 14:58:14 by nrenz             #+#    #+#             */
-/*   Updated: 2022/06/27 16:55:22 by nrenz            ###   ########.fr       */
+/*   Updated: 2022/06/29 13:02:35 by nrenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,11 @@ int	ft_atoi(const char *str)
 	return ((int)sign * number);
 }
 
-// erstelle neue Liste, dafür gebe Speicherpltz frei und initialisziere alle Werte für die Listen-Score zu -1,
-// damit die Variablen vorgefüllt sind und kein Random-Wert automatisch den Variablen zugewiesen wird.
+/* 	erstelle neue Liste, dafür gebe Speicherplatz frei
+	initialisziere alle Werte für die Listen-Score zu -1,
+ 	damit die Variablen vorgefüllt sind und kein Random-Wert 
+	automatisch den Variablen zugewiesen wird.
+*/
 t_list	*ft_create_new_list(int content)
 {
 	t_list	*newlist;

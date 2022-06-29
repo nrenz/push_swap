@@ -6,7 +6,7 @@
 /*   By: nrenz <nrenz@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 15:09:22 by nrenz             #+#    #+#             */
-/*   Updated: 2022/06/29 15:38:23 by nrenz            ###   ########.fr       */
+/*   Updated: 2022/06/29 16:57:14 by nrenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,11 @@ bool	ft_check_error(char **argv)
 	while (argv[i])
 	{
 		j = 0;
+		if (argv[i][j] == '-' && argv[i][j + 1])
+			j++;
 		while (argv[i][j])
 		{
-			if (!ft_is_digit(argv[i][j]) && (j != 0 && argv[i][j] == '-'))
+			if (!ft_is_digit(argv[i][j]))
 				return (1);
 			j++;
 		}

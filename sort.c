@@ -6,14 +6,22 @@
 /*   By: nrenz <nrenz@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/10 14:00:24 by nrenz             #+#    #+#             */
-/*   Updated: 2022/06/29 14:50:14 by nrenz            ###   ########.fr       */
+/*   Updated: 2022/06/29 16:32:46 by nrenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
 /*
-array wird erstellt, um den Index der Liste zu vergeben
+array wird erstellt und vorsortiert, 
+um den Elementen ein Index vergeben zu können.
+Zweite while-loop bedeutet:
+array an der stelle i hat den Wert der Zahlen aus der Liste
+z.B Liste: 5 3 4 1 2; array: 1 2 3 4 5; 
+an der stelle i = 0 ist der Wert von array[0] = 1 und 1 ist != 5
+dann erhöhe i um 1 und gehe die Liste weiter
+erst an der Stelle i = 4 hat der array[4] den Wert von 5
+5 steht in der Liste an stelle 1 => Index = 0
 */
 int	*ft_presort_array(t_list *list, int *array, int size)
 {
@@ -44,16 +52,6 @@ int	*ft_presort_array(t_list *list, int *array, int size)
 	return (array);
 }
 
-/*
-Der array ist vorsortiert, zweite while-loop bedeutet:
-array an der stelle i den Wert von der Liste hat
-z.B Liste: 5 3 4 1 2; array: 1 2 3 4 5; 
-an der stelle i = 0 ist der Wert von array[0] = 1 und 1 ist != 5
-dann erhöhe i um 1 und gehe die Liste weiter
-erst an der Stelle i = 4 hat der array[4] den Wert von 5
-5 steht in der Liste an stelle 1, also Index = 0
-*/
-
 void	ft_set_index(t_list *list, int *array)
 {
 	int	i;
@@ -69,7 +67,7 @@ void	ft_set_index(t_list *list, int *array)
 }
 
 /*
-max  size - 1, max steht an der letzten Stelle vom array.
+max size - 1, max steht an der letzten Stelle vom array.
 List-Länge = 5, Array-Länge = 4
 => 5 - 1, damit die Länge der Liste und von dem Array gleich ist. 
 */

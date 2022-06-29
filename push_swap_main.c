@@ -6,7 +6,7 @@
 /*   By: nrenz <nrenz@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 10:02:48 by nrenz             #+#    #+#             */
-/*   Updated: 2022/06/29 15:26:50 by nrenz            ###   ########.fr       */
+/*   Updated: 2022/06/29 17:04:48 by nrenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,6 @@ int	main(int argc, char **argv)
 	}
 	push_swap = (t_push_swap *)malloc(sizeof(t_push_swap));
 	push_swap->a_list = create_a_list(argc - 1, argv);
-	// ft_print_list(push_swap->a_list);
 	push_swap->b_list = create_b_list();
 	if (!push_swap->a_list)
 	{
@@ -60,35 +59,8 @@ int	main(int argc, char **argv)
 	if (argc == 3)
 		ft_sort_two_numbers(push_swap);
 	ft_sort_list(push_swap);
-	// ft_print_index(push_swap->a_list);
-	// ft_print_list_score(push_swap->a_list);
-	// ft_print_list_score(push_swap->b_list);
-	//ft_print_list(push_swap->a_list);
 	ft_free_lists(push_swap->a_list);
 	ft_free_lists(push_swap->b_list);
 	free(push_swap);
 	return (0);
 }
-
-// void	ft_print_index(t_list *list)
-// {
-// 	while (list != NULL)
-// 	{
-// 		printf("%d\n", list->index);
-// 		list = list->next;
-// 	}
-// }
-
-// void	ft_print_list_score(t_list *list)
-// {
-// 	while(list != NULL)
-// 	{
-// 		printf("	##########\n");
-// 		printf("		%d\n", list->content);
-// 		printf("score_a: %d - rscore_a: %d\n", list->score_a_list, list->rscore_a_list);
-// 		printf("score_b: %d - rscore_b: %d\n", list->score_b_list, list->rscore_b_list);
-// 		printf("	index: 	%d\n", list->index);
-// 		printf("	##########\n");
-// 		list = list->next;
-// 	}
-// }

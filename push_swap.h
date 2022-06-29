@@ -6,7 +6,7 @@
 /*   By: nrenz <nrenz@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 10:03:21 by nrenz             #+#    #+#             */
-/*   Updated: 2022/06/27 10:31:30 by nrenz            ###   ########.fr       */
+/*   Updated: 2022/06/29 12:22:20 by nrenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,7 @@ t_list	*create_a_list(size_t list_size, char **argv);
 t_list	*create_b_list(void);
 void	ft_fill_b_list(t_push_swap *push_swap);
 int		ft_is_digit(int c);
+int		ft_check_args(char *argc);
 int		ft_atoi(const char *str);
 bool	ft_check_error(char **argv);
 bool	ft_check_duplicates(char **argv);
@@ -90,5 +91,11 @@ void	ft_process_decision(t_push_swap *push_swap, t_list *elem, int *ttype);
 void	ft_process_decision2(t_push_swap *push_swap, t_list *elem, int *ttype);
 void	ft_sort_list(t_push_swap *push_swap);
 void	ft_final_sort(t_push_swap *push_swap);
+
+//print functions for testing
+
+// void	ft_print_list(t_list *list);
+// void	ft_print_index(t_list *list);
+// void	ft_print_list_score(t_list *list);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: nrenz <nrenz@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 10:02:48 by nrenz             #+#    #+#             */
-/*   Updated: 2022/06/29 17:04:48 by nrenz            ###   ########.fr       */
+/*   Updated: 2022/06/29 18:32:18 by nrenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,10 +44,7 @@ int	main(int argc, char **argv)
 		return (1);
 	}
 	if (ft_check_presort(argv))
-	{
-		write(1, "Already sorted", 15);
 		return (0);
-	}
 	push_swap = (t_push_swap *)malloc(sizeof(t_push_swap));
 	push_swap->a_list = create_a_list(argc - 1, argv);
 	push_swap->b_list = create_b_list();

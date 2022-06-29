@@ -6,7 +6,7 @@
 #    By: nrenz <nrenz@student.42wolfsburg.de>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/25 11:43:35 by nrenz             #+#    #+#              #
-#    Updated: 2022/06/24 11:07:05 by nrenz            ###   ########.fr        #
+#    Updated: 2022/06/29 15:49:58 by nrenz            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,6 +23,7 @@ SRCS =	create_lists.c \
 		prepare_transfer_to_a_list.c \
 		transfer_to_a_list.c \
 		transfer_to_a_list2.c \
+		utils_sort.c \
 
 OBJS = $(SRCS:.c=.o)
 
@@ -44,4 +45,8 @@ fclean: clean
 
 re: fclean $(NAME)
 
-.PHONY: all clean fclean re
+leaks:
+	make
+	leaks --atExit -- ./push_swap -1 0 2 9 3 8 4 7 5 6
+
+.PHONY: all clean fclean re leaks

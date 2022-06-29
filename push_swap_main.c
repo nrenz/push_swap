@@ -6,7 +6,7 @@
 /*   By: nrenz <nrenz@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 10:02:48 by nrenz             #+#    #+#             */
-/*   Updated: 2022/06/29 14:02:05 by nrenz            ###   ########.fr       */
+/*   Updated: 2022/06/29 15:26:50 by nrenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,8 @@ int	main(int argc, char **argv)
 		free(push_swap);
 		return (1);
 	}
+	if (argc == 3)
+		ft_sort_two_numbers(push_swap);
 	ft_sort_list(push_swap);
 	// ft_print_index(push_swap->a_list);
 	// ft_print_list_score(push_swap->a_list);

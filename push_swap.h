@@ -6,7 +6,7 @@
 /*   By: nrenz <nrenz@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 10:03:21 by nrenz             #+#    #+#             */
-/*   Updated: 2022/06/29 14:02:50 by nrenz            ###   ########.fr       */
+/*   Updated: 2022/06/29 15:23:52 by nrenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,7 @@ void	ft_push(t_list **src_list, t_list **dst_list);
 void	ft_set_index(t_list *list, int *array);
 void	ft_find_minmedmax(t_list *list, t_push_swap *push_swap);
 void	ft_putendl_fd(char *s, int fd);
+void	ft_sort_two_numbers(t_push_swap *push_swap);
 void	ft_triple_sort(t_push_swap *push_swap);
 
 // list operations

@@ -6,7 +6,7 @@
 /*   By: nrenz <nrenz@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 10:02:48 by nrenz             #+#    #+#             */
-/*   Updated: 2022/06/27 17:31:38 by nrenz            ###   ########.fr       */
+/*   Updated: 2022/06/27 19:03:54 by nrenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ int	main(int argc, char **argv)
 {
 	t_push_swap	*push_swap;
 
-	push_swap = (t_push_swap *)malloc(sizeof(t_push_swap));
 	if (ft_check_error(argv) || ft_check_duplicates(argv))
 	{
 		write(2, "error", 6);
@@ -39,13 +38,17 @@ int	main(int argc, char **argv)
 		write(1, "already sorted", 15);
 		return (0);
 	}
+	push_swap = (t_push_swap *)malloc(sizeof(t_push_swap));
 	push_swap->a_list = create_a_list(argc - 1, argv);
 	push_swap->b_list = create_b_list();
 	if (!push_swap->a_list)
+	{
+		free(push_swap);
 		return (1);
+	}
 	ft_sort_list(push_swap);
-	free(push_swap);
 	ft_free_lists(push_swap->a_list);
 	ft_free_lists(push_swap->b_list);
+	free(push_swap);
 	return (0);
 }

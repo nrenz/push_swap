@@ -6,11 +6,20 @@
 /*   By: nrenz <nrenz@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 10:02:48 by nrenz             #+#    #+#             */
-/*   Updated: 2022/06/29 11:34:53 by nrenz            ###   ########.fr       */
+/*   Updated: 2022/06/29 12:35:58 by nrenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+void	ft_print_list(t_list *list)
+{
+	while (list != NULL)
+	{
+		printf ("%d\n", list->content);
+		list = list->next;
+	}
+}
 
 void	ft_free_lists(t_list *list)
 {
@@ -28,7 +37,7 @@ int	main(int argc, char **argv)
 {
 	t_push_swap	*push_swap;
 
-	if (ft_check_error(argv) || ft_check_duplicates(argv))
+	if (ft_check_error(argv) || ft_check_duplicates(argv) || ft_check_args(argc))
 	{
 		write(2, "Error", 6);
 		return (1);
@@ -51,20 +60,12 @@ int	main(int argc, char **argv)
 	// ft_print_index(push_swap->a_list);
 	// ft_print_list_score(push_swap->a_list);
 	// ft_print_list_score(push_swap->b_list);
+	ft_print_list(push_swap->a_list);
 	ft_free_lists(push_swap->a_list);
 	ft_free_lists(push_swap->b_list);
 	free(push_swap);
 	return (0);
 }
-
-// void	ft_print_list(t_list *list)
-// {
-// 	while (list != NULL)
-// 	{
-// 		printf ("%d\n", list->content);
-// 		list = list->next;
-// 	}
-// }
 
 // void	ft_print_index(t_list *list)
 // {

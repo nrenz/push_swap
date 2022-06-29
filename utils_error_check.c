@@ -6,7 +6,7 @@
 /*   By: nrenz <nrenz@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 15:09:22 by nrenz             #+#    #+#             */
-/*   Updated: 2022/06/29 12:21:14 by nrenz            ###   ########.fr       */
+/*   Updated: 2022/06/29 12:38:48 by nrenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,11 @@ int	ft_is_digit(int c)
 		return (0);
 }
 
-int	ft_check_args(char *argc)
+int	ft_check_args(int argc)
 {
-	if (argc != 2)
+	if (argc < 2)
+		return (1);
+	else
 		return (0);
 }
 
@@ -41,8 +43,8 @@ bool	ft_check_error(char **argv)
 				return (1);
 			j++;
 		}
-		// if ((ft_atoi(argv[i]) > INT32_MAX) || (ft_atoi(argv[i]) < INT32_MIN))
-		// 	return (1);
+		if ((ft_atoi(argv[i]) > INT32_MAX) || (ft_atoi(argv[i]) < INT32_MIN))
+			return (1);
 		i++;
 	}
 	return (0);

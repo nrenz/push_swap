@@ -6,7 +6,7 @@
 /*   By: nrenz <nrenz@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 10:03:21 by nrenz             #+#    #+#             */
-/*   Updated: 2022/06/29 12:31:44 by nrenz            ###   ########.fr       */
+/*   Updated: 2022/06/29 14:02:50 by nrenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,12 +42,12 @@ typedef struct s_push_swap
 }			t_push_swap;
 
 //create lists, fill, presort, sort
-t_list	*create_a_list(size_t list_size, char **argv);
-t_list	*create_b_list(void);
-void	ft_fill_b_list(t_push_swap *push_swap);
-int		ft_is_digit(int c);
-int		ft_check_args(int argc);
-int		ft_atoi(const char *str);
+t_list		*create_a_list(size_t list_size, char **argv);
+t_list		*create_b_list(void);
+void		ft_fill_b_list(t_push_swap *push_swap);
+int			ft_is_digit(int c);
+int			ft_check_args(int argc);
+long long int		ft_atoi(const char *str);
 bool	ft_check_error(char **argv);
 bool	ft_check_duplicates(char **argv);
 bool	ft_check_presort(char **argv);

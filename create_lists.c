@@ -6,11 +6,18 @@
 /*   By: nrenz <nrenz@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/24 10:52:37 by nrenz             #+#    #+#             */
-/*   Updated: 2022/06/27 17:03:32 by nrenz            ###   ########.fr       */
+/*   Updated: 2022/06/29 14:50:52 by nrenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+// long long int	check_range_num(long long int nb)
+// {
+// 	if (nb < INT32_MIN || nb > INT32_MAX)
+// 		return (0);
+// 	return (1);
+// }
 
 t_list	*create_a_list(size_t list_size, char **argv)
 {

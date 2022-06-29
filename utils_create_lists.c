@@ -6,13 +6,13 @@
 /*   By: nrenz <nrenz@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 14:58:14 by nrenz             #+#    #+#             */
-/*   Updated: 2022/06/29 13:02:35 by nrenz            ###   ########.fr       */
+/*   Updated: 2022/06/29 14:53:14 by nrenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	ft_atoi(const char *str)
+long long int	ft_atoi(const char *str)
 {
 	long	number;
 	long	sign;
@@ -32,6 +32,12 @@ int	ft_atoi(const char *str)
 	}
 	while (str[i] >= '0' && str[i] <= '9')
 		number = number * 10 + (str[i++] - '0');
+	if ((number > INT32_MAX && sign == 1)
+		|| (number > 2147483648 && sign == -1))
+	{
+		write (1, "Error\n", 6);
+		exit(0);
+	}
 	return ((int)sign * number);
 }
 

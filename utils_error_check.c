@@ -6,7 +6,7 @@
 /*   By: nrenz <nrenz@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 15:09:22 by nrenz             #+#    #+#             */
-/*   Updated: 2022/06/29 12:38:48 by nrenz            ###   ########.fr       */
+/*   Updated: 2022/06/29 14:51:03 by nrenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,6 @@ bool	ft_check_error(char **argv)
 				return (1);
 			j++;
 		}
-		if ((ft_atoi(argv[i]) > INT32_MAX) || (ft_atoi(argv[i]) < INT32_MIN))
-			return (1);
 		i++;
 	}
 	return (0);

@@ -6,7 +6,7 @@
 /*   By: nrenz <nrenz@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 10:02:48 by nrenz             #+#    #+#             */
-/*   Updated: 2022/06/29 13:45:12 by nrenz            ###   ########.fr       */
+/*   Updated: 2022/06/29 14:02:05 by nrenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ int	main(int argc, char **argv)
 	// ft_print_index(push_swap->a_list);
 	// ft_print_list_score(push_swap->a_list);
 	// ft_print_list_score(push_swap->b_list);
-	ft_print_list(push_swap->a_list);
+	//ft_print_list(push_swap->a_list);
 	ft_free_lists(push_swap->a_list);
 	ft_free_lists(push_swap->b_list);
 	free(push_swap);

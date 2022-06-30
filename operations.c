@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils_operations.c                                 :+:      :+:    :+:   */
+/*   operations.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nrenz <nrenz@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 16:04:34 by nrenz             #+#    #+#             */
-/*   Updated: 2022/06/09 16:36:46 by nrenz            ###   ########.fr       */
+/*   Updated: 2022/06/30 11:39:48 by nrenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,6 @@ void	ft_reverse_rotate(t_list **list)
 	*list = temp;
 }
 
-// push first element of src_list to top of dst_list
 void	ft_push(t_list **src_list, t_list **dst_list)
 {
 	t_list	*temp;

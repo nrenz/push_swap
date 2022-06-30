@@ -6,18 +6,12 @@
 /*   By: nrenz <nrenz@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 15:54:51 by nrenz             #+#    #+#             */
-/*   Updated: 2022/06/29 17:02:00 by nrenz            ###   ########.fr       */
+/*   Updated: 2022/06/30 11:41:01 by nrenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-/*
-	Best_total_score = min_score_b_list + min_score_a_list
-	Best_index = Position des best_element in a_list
-	Best_ttype = die optimalsten Operationen,
-	um das best_element an die richtige Position in a_list zu bekommen.
-*/
 t_list	*ft_find_best_elem(t_list *list, int *transfer_type)
 {
 	t_list	*temp_elem;
@@ -47,9 +41,6 @@ t_list	*ft_find_best_elem(t_list *list, int *transfer_type)
 	return (temp_elem);
 }
 
-/* 
-	Summe vom Minimum beider Listen
- */
 int	ft_total_score(t_list *list, int *transfer_type)
 {
 	int	result;
@@ -92,11 +83,7 @@ int	ft_total_score2(int result, t_list *list, int *transfer_type)
 	return (result);
 }
 
-/*
-	Sechs effektivsten Operationen,
-	um die beiden Listen in die richtige Postion Zzu bekommen.
-*/
-void	ft_process_decision(t_push_swap *push_swap, t_list *elem, int *ttype)
+void	ft_prepare_lists(t_push_swap *push_swap, t_list *elem, int *ttype)
 {
 	if (*ttype == 1)
 	{
@@ -120,11 +107,11 @@ void	ft_process_decision(t_push_swap *push_swap, t_list *elem, int *ttype)
 			ft_rrb(push_swap);
 	}
 	if (*ttype > 3)
-		ft_process_decision2(push_swap, elem, ttype);
+		ft_prepare_lists2(push_swap, elem, ttype);
 	ft_pa(push_swap);
 }
 
-void	ft_process_decision2(t_push_swap *push_swap, t_list *elem, int *ttype)
+void	ft_prepare_lists2(t_push_swap *push_swap, t_list *elem, int *ttype)
 {
 	if (*ttype == 4)
 	{

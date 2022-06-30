@@ -6,7 +6,7 @@
 /*   By: nrenz <nrenz@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 10:03:21 by nrenz             #+#    #+#             */
-/*   Updated: 2022/06/29 18:10:24 by nrenz            ###   ########.fr       */
+/*   Updated: 2022/06/30 11:40:07 by nrenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,6 @@ void			ft_sort_two_numbers(t_push_swap *push_swap);
 void			ft_triple_sort(t_push_swap *push_swap);
 
 // list operations
-
 void			ft_sa(t_push_swap *push_swap);
 void			ft_sb(t_push_swap *push_swap);
 void			ft_ss(t_push_swap *push_swap);
@@ -81,17 +80,16 @@ void			ft_rrr(t_push_swap *push_swap);
 int				ft_is_sorted(t_list *list);
 
 // ranking, sorting, decision making
-
 void			ft_transfer_to_a_list(t_push_swap *push_swap);
 void			ft_score_for_b_list(t_list *list);
 void			ft_score_for_a_list_(t_list *a_list, t_list *b_list, int i);
 t_list			*ft_find_best_elem(t_list *list, int *transfer_type);
 int				ft_total_score(t_list *list, int *transfer_type);
 int				ft_total_score2(int result, t_list *list, int *transfer_type);
-void			ft_process_decision(t_push_swap *push_swap,
-					t_list *elem, int *ttype);
-void			ft_process_decision2(t_push_swap *push_swap,
-					t_list *elem, int *ttype);
+void			ft_prepare_lists(t_push_swap *push_swap, t_list *elem,
+					int *ttype);
+void			ft_prepare_lists2(t_push_swap *push_swap, t_list *elem,
+					int *ttype);
 void			ft_sort_list(t_push_swap *push_swap);
 void			ft_final_sort(t_push_swap *push_swap);
 

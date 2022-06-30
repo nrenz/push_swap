@@ -6,7 +6,7 @@
 /*   By: nrenz <nrenz@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 15:09:22 by nrenz             #+#    #+#             */
-/*   Updated: 2022/06/29 16:57:14 by nrenz            ###   ########.fr       */
+/*   Updated: 2022/06/30 17:18:12 by nrenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,6 @@
 int	ft_is_digit(int c)
 {
 	if (c >= '0' && c <= '9')
-		return (1);
-	else
-		return (0);
-}
-
-int	ft_check_args(int argc)
-{
-	if (argc < 2)
 		return (1);
 	else
 		return (0);

@@ -6,7 +6,7 @@
 /*   By: nrenz <nrenz@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 10:02:48 by nrenz             #+#    #+#             */
-/*   Updated: 2022/06/29 18:32:18 by nrenz            ###   ########.fr       */
+/*   Updated: 2022/06/30 17:17:42 by nrenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,16 +33,19 @@ void	ft_free_lists(t_list *list)
 	}
 }
 
+void	ft_check_all_erros(char **argv)
+{
+	if (ft_check_error(argv) || ft_check_duplicates(argv))
+		write(2, "Error", 6);
+}
+
 int	main(int argc, char **argv)
 {
 	t_push_swap	*push_swap;
 
-	if (ft_check_args(argc) || ft_check_error(argv)
-		|| ft_check_duplicates(argv))
-	{
-		write(2, "Error", 6);
+	if (argc < 2)
 		return (1);
-	}
+	ft_check_all_erros(argv);
 	if (ft_check_presort(argv))
 		return (0);
 	push_swap = (t_push_swap *)malloc(sizeof(t_push_swap));
